@@ -1,0 +1,67 @@
+.gradient_bg {
+  background: url(../../../assets/images/gradient_bg.webp);
+  /* height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-size: cover;
+  background-position: center;
+}
+
+.shadow {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.animate_container {
+  padding: 8px 16px;
+  width: max-content;
+  position: absolute;
+  font-size: 18px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  cursor: default;
+  opacity: 0;
+  animation: fadeInMoveUpDown 2s ease-out forwards, upDown 4s infinite ease-in-out 3s;
+}
+
+.container1 {
+  top: -100px;
+  left: 0px;
+  z-index: 999;
+  animation-delay: 0.3s;
+  background-color: #01ffff30;
+}
+
+.container2 {
+  left: 300px;
+  top: 200px;
+  z-index: 999;
+  animation-delay: 0.3s;
+  background-color: #d2fd3830;
+}
+
+.about_bg {
+  background: url(../../../assets/images/code_vector.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+@keyframes fadeInMoveUpDown {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes upDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+}

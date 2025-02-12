@@ -1,0 +1,20 @@
+.nav_li {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav_li::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #01ffff;
+  border-radius: 999px;
+  transition: width 0.4s ease-in-out;
+}
+
+.nav_li:hover::after {
+  width: 100%;
+}

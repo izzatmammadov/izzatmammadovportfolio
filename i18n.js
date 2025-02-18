@@ -111,7 +111,7 @@ const resources = {
       description:
         "Fərqli sektor layihələrində qazandığım təcrübə ilə çətinliklərin öhdəsindən gəlməyi və iş proseslərini optimallaşdırmağı öyrəndim. Komanda işində aktiv iştirak edərək, layihələrin uğurla tamamlanmasına töhfə verdim.",
       download: "CV-ni Yüklə",
-      animation1: "Frontend & Veb Developer",
+      animation1: "Frontend & Veb Proqramçı",
       animation2: "Proqram Təlimçisi & Mentor",
       aboutMe:
         "4+ illik təcrübəyə sahib bir Frontend Developerəm. Veb inkişafına böyük həvəsim var və müasir texnologiyalarla istifadəçi dostu, yüksək performanslı və miqyaslana bilən tətbiqlər inkişaf etdirməyi sevirəm. Xüsusilə React, Next.js və TypeScript üzrə ixtisaslaşmışam.",
@@ -209,8 +209,8 @@ const resources = {
       hello: "Merhaba, hadi birlikte çalışalım. . .",
       description:
         "Farklı sektör projelerinde kazandığım deneyim ile zorlukların üstesinden gelmeyi ve iş süreçlerini optimize etmeyi öğrendim. Takım çalışmasında aktif rol alarak projelerin başarılı bir şekilde tamamlanmasına katkı sağladım.",
-      download: "CV'yi İndir",
-      animation1: "Frontend & Web Geliştirici",
+      download: "CV-yi İndir",
+      animation1: "Frontend & Veb Geliştirici",
       animation2: "Yazılım Eğitmeni & Mentor",
       aboutMe:
         "4+ yıllık deneyime sahip bir Frontend Developer'ım. Web geliştirmeye büyük bir tutkuyla bağlıyım ve modern teknolojilerle kullanıcı dostu, yüksek performanslı ve ölçeklenebilir uygulamalar geliştirmeyi seviyorum. Özellikle React, Next.js ve TypeScript konusunda uzmanım.",

@@ -64,7 +64,6 @@ const Navbar = () => {
           className="sm:flex hidden items-center justify-center gap-1 bg-[#01ffff] hover:shadow-lg transition-all rounded-full duration-300 font-light text-white p-2 shadow-md"
           onClick={handleWhatsAppMessage}
         >
-          {/* <img className="w-[24px]" src={email_light} alt="email" /> */}
           <Image src={email_light} alt="email" width={24} height={24} />
         </button>
         <Language/>

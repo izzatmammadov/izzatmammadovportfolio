@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import send from "../../../assets/icons/send_white.png";
 import sendB from "../../../assets/icons/send_gray.png";
 import { useTranslation } from "react-i18next";
@@ -10,6 +10,23 @@ const Contact = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState({ email: false, message: false });
 
+  useEffect(() => {
+    if (error.email || error.message) {
+      const shortTimer = setTimeout(() => {
+        setError({ email: false, message: false });
+      }, 1500);
+
+      return () => {
+        clearTimeout(shortTimer);
+      };
+    }
+  }, [error]);
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
   const handleSendEmail = () => {
     const trimmedEmail = email.trim();
     const trimmedMessage = message.trim();
@@ -19,7 +36,11 @@ const Contact = () => {
         email: !trimmedEmail,
         message: !trimmedMessage,
       });
-      alert("Please fill in the required fields.");
+      return;
+    }
+
+    if (!validateEmail(trimmedEmail)) {
+      setError({ email: true, message: false });
       return;
     }
 
@@ -28,7 +49,6 @@ const Contact = () => {
 
     setEmail("");
     setMessage("");
-    setError({ email: false, message: false });
   };
 
   return (
@@ -56,35 +76,41 @@ const Contact = () => {
           type="email"
           placeholder={t("emailInput")}
           value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-            setError((prev) => ({ ...prev, email: false }));
-          }}
-          className={`w-full py-2 text-md px-4 border rounded-full focus:outline-none ${
+          onChange={(e) => setEmail(e.target.value)}
+          className={`w-full py-2 text-md px-4 border rounded-full focus:outline-none shadow-md ${
             error.email ? "border-[#ff6002]" : "border-[#cfd1d4]"
           }`}
         />
-        {error.email && <p className="text-red-500 text-sm">{t("emailRequired")}</p>}
+        {error.email && (
+          <p className="text-red-500 text-sm">
+            {t("emailRequired")}
+          </p>
+        )}
 
         <textarea
           placeholder={t("messageInput")}
           value={message}
-          onChange={(e) => {
-            setMessage(e.target.value);
-            setError((prev) => ({ ...prev, message: false }));
-          }}
-          className={`w-full capitalize py-2 px-4 border rounded-2xl focus:outline-none h-32 ${
+          onChange={(e) => setMessage(e.target.value)}
+          className={`w-full capitalize py-2 px-4 border rounded-2xl focus:outline-none shadow-md h-32 ${
             error.message ? "border-[#ff6002]" : "border-[#cfd1d4]"
           }`}
         />
-        {error.message && <p className="text-red-500 text-sm">{t("messageRequired")}</p>}
+        {error.message && (
+          <p className="text-red-500 text-sm">{t("messageRequired")}</p>
+        )}
 
         <button
           onClick={handleSendEmail}
-          className="flex sm:text-lg text-md items-center justify-center gap-1 bg-[#ff6002] tracking-widest text-white px-6 py-2 rounded-full shadow-lg hover:bg-[#e05502] transition"
+          className="flex sm:text-lg text-md items-center justify-center gap-1 bg-[#ff6002] tracking-widest text-white px-6 py-2 rounded-full shadow-md hover:bg-[#e05502] transition"
         >
           {t("sendBtn")}
-          <Image width={0} height={0} className="sm:w-[18px] w-[16px]" src={send} alt="send" />
+          <Image
+            width={0}
+            height={0}
+            className="sm:w-[18px] w-[16px]"
+            src={send}
+            alt="send"
+          />
         </button>
       </div>
     </section>

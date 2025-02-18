@@ -40,13 +40,6 @@ const Header = () => {
         className={`${style.gradient_bg} h-[100vh] flex sm:flex-row flex-col-reverse items-center justify-center `}
       >
         <div className="relative sm:w-[40%] w-full">
-          {/* <img
-            data-aos="fade-up"
-            data-aos-duration="1500"
-            className="grayscale absolute sm:-top-72 top-5 sm:w-full"
-            src={izzat_profile}
-            alt="izzat"
-          /> */}
           <Image width={0} height={0} data-aos="fade-up"
             data-aos-duration="1500"
             className="grayscale absolute sm:-top-72 top-5 sm:w-full"
@@ -70,14 +63,9 @@ const Header = () => {
           <h2
             data-aos="fade-down"
             data-aos-duration="1500"
-            className="sm:text-6xl text-5xl font-bold relative"
+            className="sm:text-6xl text-5xl font-bold relative z-0"
           >
             {t("fullname")}
-            {/* <img
-              className="absolute sm:rotate-12 sm:-top-[110px] opacity-[0.2]"
-              src={cursor}
-              alt="cursor"
-            /> */}
             <Image width={0} height={0} className="absolute sm:rotate-12 sm:-top-[110px] opacity-[0.2]"
               src={cursor}
               alt="cursor"/>

@@ -19,11 +19,6 @@ const Experience = () => {
         data-aos-duration="1500"
         className="flex items-center justify-center flex-wrap gap-10 pt-14"
       >
-        {/* <img
-          className="sm:block hidden absolute -z-50 opacity-20"
-          src={circle}
-          alt="circle"
-        /> */}
         <Image width={0} height={0} className="sm:block hidden absolute -z-50 opacity-20"
           src={circle}
           alt="circle"/>

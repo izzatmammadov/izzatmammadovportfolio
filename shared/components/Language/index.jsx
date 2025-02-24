@@ -50,7 +50,7 @@ const Language = () => {
               onClick={() => changeLanguage(lang)}
               className="flex items-center text-center justify-center"
             >
-              <Image width={0} height={0} src={flag} alt={lang} className="w-[37.64px] border-t-[3px] border- pt-2" />
+              <Image width={0} height={0} src={flag} alt={lang} className="w-[37.64px] border-t-[3px] border-[#cfd1d4] pt-2" />
             </button>
           ))}
       </div>

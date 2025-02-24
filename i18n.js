@@ -206,7 +206,7 @@ const resources = {
       experience: "Tecrübe",
       contact: "İletişim",
       fullname: "İzzet Memmedov",
-      hello: "Merhaba, hadi birlikte çalışalım. . .",
+      hello: "Selam, hadi birlikte çalışalım. . .",
       description:
         "Farklı sektör projelerinde kazandığım deneyim ile zorlukların üstesinden gelmeyi ve iş süreçlerini optimize etmeyi öğrendim. Takım çalışmasında aktif rol alarak projelerin başarılı bir şekilde tamamlanmasına katkı sağladım.",
       download: "CV-yi İndir",

@@ -4,7 +4,7 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      welcome: "WELCOME",
+      welcome: "HOME PAGE",
       about: "About Me",
       experience: "Experience",
       contact: "Contact",
@@ -102,7 +102,7 @@ const resources = {
   },
   az: {
     translation: {
-      welcome: "XOŞ GƏLDİNİZ",
+      welcome: "ƏSAS SƏHİFƏ",
       about: "Haqqımda",
       experience: "Təcrübə",
       contact: "Əlaqə",
@@ -201,7 +201,7 @@ const resources = {
   },
   tr: {
     translation: {
-      welcome: "HOŞ GELDİNİZ",
+      welcome: "ANA SAYFA",
       about: "Hakkımda",
       experience: "Tecrübe",
       contact: "İletişim",
